@@ -1,0 +1,13 @@
+version: '3.4'
+services:
+  promnesia:
+    image: promnesia
+    environment:
+      - PUID=$PUID
+      - PGID=$PGID
+    ports:
+      - "13131:13131"
+    volumes:
+      - /data/promnesia/config:/config
+      - /data/promnesia/data:/data
+    restart: unless-stopped
