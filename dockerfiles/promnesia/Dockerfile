@@ -1,3 +1,5 @@
+# NOTE: add OUTPUT_DIR = '/data' to config.py
+
 FROM python:3.9-slim
 
 RUN pip3 install promnesia[all]
