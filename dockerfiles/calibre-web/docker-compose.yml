@@ -1,0 +1,18 @@
+---
+version: "2.1"
+services:
+  calibre-web:
+    image: linuxserver/calibre-web:latest
+    container_name: calibre-web
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Asia/Shanghai
+      - DOCKER_MODS=linuxserver/mods:universal-calibre #optional
+      - OAUTHLIB_RELAX_TOKEN_SCOPE=0 #optional
+    volumes:
+      - /data/calibre-web/config:/config
+      - /data/calibre/library:/books
+    ports:
+      - 8083:8083
+    restart: unless-stopped
