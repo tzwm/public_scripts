@@ -2,8 +2,9 @@
 
 # source this script
 
-CONFIG_BASE_URL_GITHUB="https://raw.githubusercontent.com/tzwm/public_config/main"
-CONFIG_BASE_URL_CODING="https://tzwm01.coding.net/p/public_config/d/public_config/git/raw/main"
+CONFIG_BASE_URL_GITHUB="https://raw.githubusercontent.com/tzwm/public_scripts/main"
+
+CONFIG_BASE_URL_JSDELIVR="https://cdn.jsdelivr.net/gh/tzwm/public_scripts@main"
 
 # bascily setup
 echo "==== 0. basicly setup ===="
@@ -13,7 +14,7 @@ function switch_download_mirror() {
   if [[ "$ans" == "y" ]]; then
     CONFIG_BASE_URL="$CONFIG_BASE_URL_GITHUB"
   else
-    CONFIG_BASE_URL="$CONFIG_BASE_URL_CODING"
+    CONFIG_BASE_URL="$CONFIG_BASE_URL_JSDELIVR"
   fi
 }
 
